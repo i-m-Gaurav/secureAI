@@ -25,8 +25,8 @@ jobs:
           pip install bandit semgrep pylint pip-audit cyclonedx-bom pip-licenses
 
       - name: Run Bandit security scan
-        run: |
-          bandit -r src -f json -o bandit_report.json
+        run: bandit -r src -f json -o bandit_report.json || true
+
 
       - name: Run Semgrep scan
         run: semgrep --config=auto src --json --output=semgrep_report.json

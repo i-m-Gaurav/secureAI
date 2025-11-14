@@ -33,7 +33,7 @@ jobs:
 
       - name: Run PyLint analysis
         continue-on-error: true
-        run: pylint src --output-format=json > pylint_report.json
+        run: pylint src/*.py --output-format=json > pylint_report.json
 
 
       - name: Run pip-audit dependency scan

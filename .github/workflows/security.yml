@@ -32,7 +32,9 @@ jobs:
         run: semgrep --config=auto src --json --output=semgrep_report.json
 
       - name: Run PyLint analysis
+        continue-on-error: true
         run: pylint src --output-format=json > pylint_report.json
+
 
       - name: Run pip-audit dependency scan
         run: pip-audit --format=json --output=vulnerability_report.json

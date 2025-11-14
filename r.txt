@@ -1,0 +1,13 @@
+pandas
+numpy
+scikit-learn
+joblib
+
+bandit
+semgrep
+pylint
+pip-audit
+safety
+pip-licenses
+cyclonedx-bom
+python-dotenv
